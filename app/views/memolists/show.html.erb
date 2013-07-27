@@ -1,0 +1,137 @@
+ <style type="text/css">
+ /*<![CDATA[*/
+body {
+	padding: 10px;
+	margin: 0;
+}
+#message1 {
+	display: inline-block;
+	width: 6em;
+	text-align: center;
+	background: green;
+	visibility: hidden;
+	color: #FFFFFF;
+}
+#message2 {
+	display: inline-block;
+	width: 6em;
+	text-align: center;
+	background: red;
+	visibility: hidden;
+	color: #FFFFFF;
+}
+#grid-content {
+	margin: 0 60px;   
+	overflow: hidden;
+	border: 0.5px solid #eb6100;
+}
+#target {
+    width: 370px;
+    height: 325px;
+}/*]]>*/
+</style>
+
+<script type="text/javascript">
+//<![CDATA[
+$(function(){
+	var hsort_flg = false;
+
+	//setup
+	var vg = $("#grid-content").vgrid({
+		easeing: "easeOutQuint",
+		time: 400,
+		delay: 20,
+		fadeIn: {
+			time: 500,
+			delay: 50
+		},
+		onStart: function(){
+			$("#message1")
+				.css("visibility", "visible")
+				.fadeOut("slow",function(){
+					$(this).show().css("visibility", "hidden");
+				});
+		},
+		onFinish: function(){
+			$("#message2")
+				.css("visibility", "visible")
+				.fadeOut("slow",function(){
+					$(this).show().css("visibility", "hidden");
+				});
+		}
+	});
+
+	//sort
+	$("#rsort").click(function(e){
+		$("#grid-content").vgsort(function(a, b){
+			return Math.random() > 0.5 ? 1 : -1 ;
+		}, "easeInOutExpo", 300, 20);
+		hsort_flg = true;
+		return false;
+	});
+});
+//]]>
+</script>
+
+<script type="text/javascript">
+function sbxload( el ) {
+}
+function sbxchange( el ) {
+}
+Shadowbox.init(
+{
+	counterLimit:20,
+	overlayColor:'#000000',
+	overlayOpacity:0.6,
+	onFinish : sbxload,
+	onChange: sbxchange
+},
+function () {
+	Shadowbox.setup("a.swf", {
+		gallery: "swf",
+        width: 510,
+        height: 400,
+        player: "swf",
+        continuous: true,
+		counterType:"skip",
+        flashParams: { allowScriptAccess: "always" }
+	});
+});
+</script>
+  <form action="#" method="get" style="margin-bottom:10px;">
+	<input type="button" id="rsort" value="Random Sort" />
+	<span id="message1">onStart</span>
+	<span id="message2">onFinish</span>
+  </form>
+<div id="grid-content">
+  <% @memodb.each do |memodb| %>
+	<div id="target">
+	  <img src="<%= memodb.name %>" width="360" height="300">
+	  <div style="display:inline;position: absolute; top:0px; left:0px;">
+		<a class="swf" href="<%= memodb.url %>">
+		  <%= image_tag("/images/click.png", :size => "360x300") %></a>
+	  <div Align="right">
+		<%=link_to "DELETE",:action=>"destroy",:name=> memodb.name%></div>
+<%= link_to "Delete",memolists_path,:confirm => 'Sure?',
+                            :method => :delete,:remote => true%>	</div>	
+  </div>
+  <% end %>
+</div>
+<br>
+	<center>
+	<br>
+	<a href="javascript:location.href='/hello'">トップページにもどる</a>
+	</center>
+
+<script>
+$(function() {
+  setTimeout(function() {
+    $('#notice').fadeOut("slow");
+  }, 800);
+  
+  $('a[data-method="delete"]').live('ajax:success', function(e, data, status, xhr) {
+    $('#memolist_'+data.memolist.id).fadeOut("slow");
+  });
+  
+});
+</script>

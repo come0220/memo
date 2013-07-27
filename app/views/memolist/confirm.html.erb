@@ -1,0 +1,113 @@
+<%= stylesheet_link_tag    "mystyle" %>
+<script type="text/javascript">
+//<![CDATA[
+$(function(){
+	var hsort_flg = false;
+
+	//setup
+	var vg = $("#grid-content").vgrid({
+		easeing: "easeOutQuint",
+		time: 400,
+		delay: 20,
+		fadeIn: {
+			time: 500,
+			delay: 50
+		},
+		onStart: function(){
+			$("#message1")
+				.css("visibility", "visible")
+				.fadeOut("slow",function(){
+					$(this).show().css("visibility", "hidden");
+				});
+		},
+		onFinish: function(){
+			$("#message2")
+				.css("visibility", "visible")
+				.fadeOut("slow",function(){
+					$(this).show().css("visibility", "hidden");
+				});
+		}
+	});
+
+	//sort
+	$("#rsort").click(function(e){
+		$("#grid-content").vgsort(function(a, b){
+			return Math.random() > 0.5 ? 1 : -1 ;
+		}, "easeInOutExpo", 300, 20);
+		hsort_flg = true;
+		return false;
+	});
+});
+//]]>
+</script>
+
+<%# shadowbox %>
+<script type="text/javascript">
+function sbxload( el ) {
+}
+function sbxchange( el ) {
+}
+Shadowbox.init(
+{
+	counterLimit:20,
+	overlayColor:'#000000',
+	overlayOpacity:0.6,
+	onFinish : sbxload,
+	onChange: sbxchange
+},
+function () {
+	Shadowbox.setup("a.swf", {
+		gallery: "swf",
+        width: 510,
+        height: 400,
+        player: "swf",
+        continuous: true,
+		counterType:"skip",
+        flashParams: { allowScriptAccess: "always" }
+	});
+});
+</script>
+
+<%# SORT %>
+  <form action="#" method="get" style="margin-bottom:10px;">
+	<input type="button" id="rsort" value="Random Sort" />
+	<span id="message1">onStart</span>
+	<span id="message2">onFinish</span>
+  </form>
+  <div id="grid-content">
+<%# imgの個数繰り返す %>
+		<% i = 0
+		   while i < @img.size %>
+<%# target 少し大きく %>
+		   <div id="target">
+		   <img src="<%= @img[i] %>" width="360" height="300">
+		     <div style="display:inline;position: absolute; top:0px; left:0px;">
+		   <a class="swf" href="http://static.xvideos.com/swf/xv-player.swf?id_video=<%= @result[i] %>">
+		   <%= image_tag("/images/click.png", :size => "360x300", :style =>"border:solid 0px #000000") %></a>
+<Div Align="right">
+		   <%=link_to "保存★",:action=>"makedb",:name=>@img[i],:url => @result[i] %>	
+</Div>
+      </div>
+           </div>	
+<% i += 1
+   end %>
+</div>
+<%# ページ数 %>
+<br>
+	<center>
+	  
+      <div class="pagination">
+        <ul>
+		  <% i = 0
+			 while i < @page-1 %>
+			 <li> 
+			   <%=link_to i+1,:action=>"getdata",:number=>i,:name => {:"name" => @name} %>	
+		  <% i += 1 %>
+</li>
+<% end %>
+</ul>
+</div>
+	<p><a href="javascript:location.href='/hello'">トップページにもどる</a>
+	&nbsp;
+</p>
+</center>
