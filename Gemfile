@@ -35,8 +35,63 @@ gem 'jquery-rails'
 
 # To use debugger
 #gem 'ruby-debug19', :require => 'ruby-debug'
-gem 'hpricot'
-gem 'jpmobile'
-gem 'thin'
-gem 'tilt', '~> 1.4.1'
-gem 'rails_12factor'
+  gem 'hpricot'
+  gem 'jpmobile'
+  gem 'thin'
+  gem 'tilt', '~> 1.4.1'
+  gem 'rails_12factor'
+
+  # Railsコンソールの多機能版
+  gem 'pry-rails'
+
+  # pryの入力に色付け
+  gem 'pry-coolline'
+
+  # デバッカー
+  gem 'pry-byebug'
+
+  # Pryでの便利コマンド
+  gem 'pry-doc'
+
+  # PryでのSQLの結果を綺麗に表示
+  gem 'hirb'
+  gem 'hirb-unicode'
+
+  # pryの色付けをしてくれる
+  gem 'awesome_print'
+
+  # CSS Support
+  gem 'less-rails'
+
+  # App Server
+  gem 'puma'
+
+  # Presenter Layer
+  gem 'draper'
+
+  # Haml
+  gem 'haml-rails'
+
+  # Assets log cleaner
+  gem 'quiet_assets'
+
+  # Form Builders
+  gem 'simple_form'
+
+  # Process Management
+  gem 'foreman'
+
+  # HTML5 Validator
+  gem 'html5_validators'
+
+  # PG/MySQL Log Formatter
+  gem 'rails-flog'
+
+  # Migration Helper
+  gem 'migrant'
+
+  # Pagenation
+  gem 'kaminari'
+
+  # NewRelic
+  gem 'newrelic_rpm'
