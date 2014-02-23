@@ -59,8 +59,8 @@ module Memo
     config.action_view.javascript_expansions[:defaults] = %w(jquery jquery_ujs) #v1.0.1以上
     config.action_view.javascript_expansions[:defaults] = %w(jquery rails) #v1.0.1未満
 
-  require 'openssl'
-  OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
+require 'openssl'
+OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
   end
 end

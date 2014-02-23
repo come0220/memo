@@ -1,46 +1,17 @@
 ---
-click.png: click.png
-glyphicons-halflings-white.png: glyphicons-halflings-white.png
-glyphicons-halflings.png: glyphicons-halflings.png
-rails.png: rails.png
-application.js: application.js
-bootstrap.js: bootstrap.js
-bootstrap.min.js: bootstrap.min.js
-comments.js: comments.js
-databases.js: databases.js
-jquery.easing.1.3.js: jquery.easing.1.3.js
-jquery.smartpage.0.1.0.min.js: jquery.smartpage.0.1.0.min.js
-jquery.vgrid.0.1.7.min.js: jquery.vgrid.0.1.7.min.js
-memolist.js: memolist.js
-shadowbox.js: shadowbox.js
-smartphone.js: smartphone.js
-swfobject.js: swfobject.js
-_notes/dwsync.xml: _notes/dwsync.xml
-application.css: application.css
-bootstrap-responsive.css: bootstrap-responsive.css
-bootstrap-responsive.min.css: bootstrap-responsive.min.css
-bootstrap.css: bootstrap.css
-bootstrap.min.css: bootstrap.min.css
-comments.css: comments.css
-databases.css: databases.css
-general.css: general.css
-layout.css: layout.css
-memolist.css: memolist.css
-mystyle.css: mystyle.css
-scaffolds.css: scaffolds.css
-shadowbox/LICENSE: shadowbox/LICENSE
-shadowbox/README: shadowbox/README
-shadowbox/close.png: shadowbox/close.png
-shadowbox/expressInstall.swf: shadowbox/expressInstall.swf
-shadowbox/loading.gif: shadowbox/loading.gif
-shadowbox/next.png: shadowbox/next.png
-shadowbox/pause.png: shadowbox/pause.png
-shadowbox/play.png: shadowbox/play.png
-shadowbox/player.swf: shadowbox/player.swf
-shadowbox/previous.png: shadowbox/previous.png
-shadowbox/shadowbox.css: shadowbox/shadowbox.css
-jquery.js: jquery.js
-jquery.min.js: jquery.min.js
-jquery.min.map: jquery.min.map
-jquery_ujs.js: jquery_ujs.js
-coffee-script.js: coffee-script.js
+!binary "Y2xpY2sucG5n": click-86b8f8f20ba4377a2ab6ebda54eedf5e.png
+!binary "cmFpbHMucG5n": rails-782b548cc1ba7f898cdad2d9eb8420d2.png
+!binary "YXBwbGljYXRpb24uanM=": application-7b39557e976e9e3771cb0e782880f1fd.js
+!binary "YXBwbGljYXRpb24uY3Nz": application-ddc3d7e798f9b37a99c462a51444b04b.css
+!binary "c2hhZG93Ym94L0xJQ0VOU0U=": !binary |-
+  c2hhZG93Ym94L0xJQ0VOU0U=
+!binary "c2hhZG93Ym94L1JFQURNRQ==": !binary |-
+  c2hhZG93Ym94L1JFQURNRQ==
+!binary "c2hhZG93Ym94L2Nsb3NlLnBuZw==": shadowbox/close-3316ed4ca33d3585696941e9fc18ddbc.png
+!binary "c2hhZG93Ym94L2V4cHJlc3NJbnN0YWxsLnN3Zg==": shadowbox/expressInstall-10af483b311286072a75474d9b0c08f6.swf
+!binary "c2hhZG93Ym94L2xvYWRpbmcuZ2lm": shadowbox/loading-4508ed1848645cb274e564530fcfccce.gif
+!binary "c2hhZG93Ym94L25leHQucG5n": shadowbox/next-f5efeebb5c601a26969e304e14c9cb37.png
+!binary "c2hhZG93Ym94L3BhdXNlLnBuZw==": shadowbox/pause-ea6aad6bd1d23046117100224d4bfa1f.png
+!binary "c2hhZG93Ym94L3BsYXkucG5n": shadowbox/play-704e18460e481f3120b50756f2f28880.png
+!binary "c2hhZG93Ym94L3BsYXllci5zd2Y=": shadowbox/player-6c5690168ed161dd1c432035fc6273f9.swf
+!binary "c2hhZG93Ym94L3ByZXZpb3VzLnBuZw==": shadowbox/previous-94d2599c85e0ca3fea5ee1b76f1f46b1.png
