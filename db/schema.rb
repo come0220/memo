@@ -11,24 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120801131455) do
-
-  create_table "comments", :force => true do |t|
-    t.string   "commenter"
-    t.text     "body"
-    t.integer  "memolist_id"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-  add_index "comments", ["memolist_id"], :name => "index_comments_on_memolist_id"
-
-  create_table "databases", :force => true do |t|
-    t.string   "name"
-    t.string   "url"
-    t.datetime "created_at", :null => false
-    t.datetime "updated_at", :null => false
-  end
+ActiveRecord::Schema.define(:version => 20140507135008) do
 
   create_table "memodbs", :force => true do |t|
     t.string   "name"
@@ -37,9 +20,9 @@ ActiveRecord::Schema.define(:version => 20120801131455) do
     t.datetime "updated_at", :null => false
   end
 
-  create_table "titles", :force => true do |t|
+  create_table "memos", :force => true do |t|
     t.string   "name"
-    t.date     "sales_date"
+    t.string   "url"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end
