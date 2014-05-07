@@ -28,4 +28,5 @@ body {
     height: 325px;
     display: inline-block;
     vertical-align: bottom;
+    position: relative;
 }
