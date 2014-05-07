@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require File.expand_path('../boot', __FILE__)
 
 require 'rails/all'
@@ -56,11 +55,5 @@ module Memo
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = '1.0'
-    config.action_view.javascript_expansions[:defaults] = %w(jquery jquery_ujs) #v1.0.1以上
-    config.action_view.javascript_expansions[:defaults] = %w(jquery rails) #v1.0.1未満
-
-require 'openssl'
-OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
-
   end
 end

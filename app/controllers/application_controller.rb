@@ -1,6 +1,5 @@
 # coding: utf-8
 class ApplicationController < ActionController::Base
-  include Jpmobile::ViewSelector
 
   def hello
   end
