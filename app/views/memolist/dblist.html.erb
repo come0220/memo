@@ -114,7 +114,7 @@ var attributes = {}; swfobject.embedSWF("flv.swf", "flash", "320", "240", "8.0.0
 	  <img src="<%= memodb.name %>" width="360" height="300">
 	  <div style="display:inline;position: absolute; top:0px; left:0px;">
 		<a class="swf" href="http://static.xvideos.com/swf/xv-player.swf?id_video=<%= memodb.url %>">
-		  <%= image_tag("/images/click.png", :size => "360x300") %></a>
+		<img src="<%= asset_path "click.png" %>" /></a>
 	  <div Align="right">
 		<%=link_to "DELETE",:action=>"dbdelete",:name=> memodb.name%></div>	
 </div>	

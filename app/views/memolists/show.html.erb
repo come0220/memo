@@ -109,7 +109,7 @@ function () {
 	  <img src="<%= memodb.name %>" width="360" height="300">
 	  <div style="display:inline;position: absolute; top:0px; left:0px;">
 		<a class="swf" href="<%= memodb.url %>">
-		  <%= image_tag("/images/click.png", :size => "360x300") %></a>
+		<img src="<%= asset_path "click.png" %>" /></a>
 	  <div Align="right">
 		<%=link_to "DELETE",:action=>"destroy",:name=> memodb.name%></div>
 <%= link_to "Delete",memolists_path,:confirm => 'Sure?',
