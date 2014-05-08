@@ -83,7 +83,7 @@ function () {
 		   <img src="<%= @img[i] %>" width="360" height="300">
 		     <div style="display:inline;position: absolute; top:0px; left:0px;">
 		   <a class="swf" href="http://static.xvideos.com/swf/xv-player.swf?id_video=<%= @result[i] %>">
-		   <%= image_tag("/images/click.png", :size => "360x300", :style =>"border:solid 0px #000000") %></a>
+		   	<img src="<%= asset_path "click.png" %>"  width="360" height="300" ></a>
 <Div Align="right">
 		   <%=link_to "保存★",:action=>"makedb",:name=>@img[i],:url => @result[i] %>	
 </Div>
