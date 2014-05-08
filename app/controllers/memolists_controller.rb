@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 class MemolistsController < ApplicationController
 
-before_filter :authenticate
+#before_filter :authenticate
 
   def index
     @memodb = Memodb.all(:order => "created_at DESC")

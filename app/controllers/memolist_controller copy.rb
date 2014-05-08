@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 class MemolistController < ApplicationController
 
-before_filter :authenticate
+#before_filter :authenticate
 
   def hello
   end
